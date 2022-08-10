@@ -25,7 +25,7 @@ app.use(cors())
 app.use("/", routes);
 
 
-app.listen(port, () => {
+app.listen(port || 5000, () => {
   console.log(`Server Started at ${port}`);
 });
 

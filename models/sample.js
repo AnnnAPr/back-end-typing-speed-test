@@ -5,7 +5,17 @@ const dataSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    scores: [],
+    scores: [
+      {
+        name: {
+          type: String,
+          required: true
+        }, 
+        score: {
+          type: Number,
+          required: true
+        },
+    }],
     title: {
         type: String,
         unique: true,
@@ -13,6 +23,6 @@ const dataSchema = new mongoose.Schema({
     }
 })
 
-const Sample = mongoose.model('Sample', dataSchema)
+const Sample = mongoose.model('Sample1', dataSchema)
 
 export default Sample

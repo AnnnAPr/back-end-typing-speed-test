@@ -47,7 +47,8 @@ router.patch("/samples/:id/scores", async (req, res) => {
 
   try {
     const data = await Sample.findById(req.params.id);
-    data.scores.push(req.body.score)
+    data.scores.push({"name": req.body.name, "score": req.body.score})
+    // data.scores.push(req.body.score)
     const dataToSave = await data.save();
     res.status(200).json(dataToSave)
   }
