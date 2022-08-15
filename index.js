@@ -6,6 +6,7 @@ import cors from "cors"
 
 dotenv.config();
 const mongoString = process.env.TYPING_DATABASE_URL;
+// const mongoString = process.env.TEST_DB;
 const port = process.env.PORT || 5000
 mongoose.connect(mongoString);
 const database = mongoose.connection;
